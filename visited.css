@@ -1,0 +1,9 @@
+.container {
+   height: 50px;
+   width: 50px;
+   background-color: red;
+   text-align: center;
+   padding: 15px;
+   margin: 10%;
+   border: in-line block;
+}
