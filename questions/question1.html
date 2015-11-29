@@ -1,0 +1,29 @@
+<div class="test">
+	<h2 style="text-align: center"><b>Test Calculator</b></h2>
+
+<p style="font-size 10">(Introduction to what calculator does)</p>
+<br/>
+	<form>
+	
+		Materials: <input style="margin-left: 50px" type="text" ng-model="first" />
+		<br>
+		Overhead: <input style="margin-left: 46px" type="text" ng-model="second"/>
+		<br>
+		Manufacturing: <input style="margin-left: 8px" type="text" ng-model="third"/>
+		<br/>
+		<button style="float: right" ng-click="sum = first + second + third">Calculate</button>
+		<br/>
+		<p style="text-align: center; font-size: 16"><b>The answer is{{ sum | currency }}.</b></p>
+	</form>
+	
+</div>
+
+//Daniel - please don't laugh at my code, which is probably way off. :-) This is the html template page that comes up when someone clicks on a button or link to bring up a certain type of calculator. I have this part squared away with ui-router, and at least it is working OK. 
+
+Let me give you an overview of exactly what I'm trying to do here. As you can see, I just have 3 basic input boxes that are stacked on top of each other. 
+
+I have added an ng-model to each one, so that when a number value is added to each one, it is assigned to a variable that can be used in a mathematical equation. For example, if 5.67 was entered in the first input box, then it would be assigned to "first" on the scope (correct me if I'm wrong on this, which there's a good chance I am).
+
+In most basic sense, I just want to have the three numbers for each box added together, so first + second + third. And I've added an ng-click in the Calculate button command to add them all together. Do I put the addition inside the "" area of the ng-click? Or, do I put a function in the "" that is defined in the controller to return the sum? You can see that I'm putting the sum expression to be displayed in the final line of the page, with a currency filter to adequately show cost.
+
+The next tab (question 2) is where I have the controller listed. I have added some questions for this section on that tab as well.
