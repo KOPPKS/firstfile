@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <html ng-app="forecastTool">
+      <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial scale=1">
+        <title>AngularJS WeatherTool</title>
+        <script>document.write('<base href="' + document.location + '" />');</script>
+        <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script data-require="angular.js@1.2.x" src="https://code.angularjs.org/1.2.16/angular.js" data-semver="1.2.16"></script>
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="app.js"></script>
+        <script src="Controller.js"></script>
+        <script src="factory.js"></script>
+      </head>
+      <body ng-controller="weatherCtrl">
+        <h3 class="head">Weather Forecast Tool</h3>
+          <div class="size">
+          <form>
+          Enter zip code of city <input type="number" ng-model="zip">
+          <input type="submit" value="Search" ng-click="findWeather(zip)">
+          </form>
+          <h2 class="title" ng-show="zip">Searching the forecasts for: {{zip}}</h2>
+        </div>
+          <div class="center">
+            <h1 class="new">Forecast For: {{ place.location.city }}</h1>
+            <h2 class="new">Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></h2>
+            <table class="table table-bordered">
+          <thead class="td">
+            <tr>
+              <th class="tdd"><b>Date - Forecast</b></th>
+              <th class="tdd"><b>Temperature</b></th>
+              <th class="tdd"><img src="images/umb2.png"></th>
+            </tr>
+          </thead>
+          <tbody class="tf">
+          <tr ng-repeat = "forecast in place.item.forecast">
+            <td class="tf"><strong>{{ forecast.date }}</strong> – {{ forecast.text }}</td>
+            <td class="tf">High: {{ forecast.high }}&deg; | Low: {{ forecast.low }}&deg;</td>
+            <td class="tf"><img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></td>
+          </div>
+        </div>
+        <img class="super" src="images/sun.jpeg">
+        <img class="profit" src="images/lighting.png">
+      </body>
+    </html>
+    

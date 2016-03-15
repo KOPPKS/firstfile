@@ -1,0 +1,2 @@
+app.controller('contactController', function($scope) {
+	$scope.message = "This is getting frustrating!";

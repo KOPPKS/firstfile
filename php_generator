@@ -1,0 +1,13 @@
+<?php
+
+$lower = 'abcdefghijklmnopqrstuvwxyz';
+$upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+$numbers = '0123456789';
+$symbols = "$#@!&*&";
+
+$char = $lower . $upper . $numbers . $symbols;
+
+echo $chars;
+
+?>
+

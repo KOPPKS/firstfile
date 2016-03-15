@@ -1,0 +1,54 @@
+// A) Define an array of data
+
+var family = [
+    { name: 'Kevin', height: 77, age: 47 },
+    { name: 'Dana', height: 62, age: 53 },
+   ];
+
+var scale=d3.scale.linear()
+	.domain([0, 100])
+	.range([0, 754]);
+
+
+// B) Select your container (d3.select(???))
+  
+ var container = d3.select('#container');
+
+// C) Select the content (container.selectAll('???').data(???)
+ 
+var content = container.selectAll('div').data(family);
+
+// NOW THE MAGIC!
+// Step 1: Enter (content.enter().append('???').???)
+content.enter().append('div')
+    .attr('class', 'block')
+	.text(function(person) {
+    	return person.name;
+	})
+    .style('width',function (person) {
+    	return person.height + 'px';
+    });
+// Step 2: Update (content.transition().duration(???).???)
+setTimeout(function() {
+    
+    content.transition()
+    	.duration(5000)
+    	.style('width', function(person) {
+        	return (person.height*2) + 'px';
+    });
+    
+}, 3000);
+    
+
+// Step 3: Remove (content.remove())
+
+setTimeout(function() {
+    
+    content.transition().duration(1000)
+    	.style('width', '0px')
+    	.remove();
+
+}, 5000);
+
+
+https://jsfiddle.net/mqrh874a/2/

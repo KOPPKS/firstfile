@@ -1,0 +1,82 @@
+body  {
+  background: url('images/storm.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: black;
+  font-color: black;
+}
+
+.size {
+  font-size: 14px;
+}
+
+form { 
+margin: 0 auto; 
+width:250px;
+color: black;
+}
+
+.center { 
+margin: 0 auto; 
+width: 500px;
+color: black;
+font-size: 12px;
+}
+
+.new {
+  font-size: 15px;
+}
+
+.head {
+	text-align: center;
+	font-weight: bolder;
+	color: black;
+}
+
+.title {
+	text-align: center;
+	color: black;
+  font-size: 8px;
+}
+
+.td {
+  background-color: #ff3300;
+  text-align: center;
+  padding: 0px;
+  margin: auto;
+}
+
+.tdd {
+  text-align: center;
+  padding: 0px;
+}
+
+.tf {
+  background-color: #ffffff;
+  vertical-align: center;
+  padding: 0px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.super {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  border: 0;
+  width: 200px;
+  height: 180px;
+}
+
+.profit {
+  position: fixed;
+  top: 0px;
+  right: 0;
+  border: 0;
+  width: 200px;
+  height: 180px;
+}

@@ -1,0 +1,32 @@
+body  {
+  background: url('images/storm.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: black;
+  font-color: black;
+}
+
+form { 
+margin: 0 auto; 
+width:250px;
+color: black;
+}
+
+.center { 
+margin: 0 auto; 
+width: 500px;
+color: black;
+}
+
+.head {
+	text-align: center;
+	font-weight: bolder;
+	color: black;
+}
+
+.title {
+	text-align: center;
+	color: black;
+}
